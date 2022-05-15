@@ -1,0 +1,21 @@
+def wordcount(filename, listwords):   
+    try:
+
+    file = open( filename, "r")   
+
+    read = file.readlines()
+    file.close()
+    for x in listwords:
+        y = x.lower()
+        counter = 0
+        for z in read:
+            line = z.split()
+            for ss in line:
+                l = ss.lower()
+            if y == l:
+                 counter += 1
+
+        print(y , counter)     
+Now I try to recall the function with a txt file and the word to find
+
+ wordcount("t8.shakespeare.txt" , 'word' )
